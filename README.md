@@ -31,6 +31,7 @@ MOFU.csvlib('*.csv').label_column
 | value1-1 | value2-1 | value3-1 |
 | value1-2 | value2-2 | value3-2 |
 | value1-3 | value2-3 | value3-3 |
+
 このような構造を持つ`csv`ファイルに対して、
 ```
 ['label1' 'label2' 'label3']
@@ -46,6 +47,7 @@ MOFU.csvlib('*.csv').dict_column
 | value1-1 | value2-1 | value3-1 |
 | value1-2 | value2-2 | value3-2 |
 | value1-3 | value2-3 | value3-3 |
+
 このような構造を持つ`csv`ファイルに対して、`key`がラベル、`value`がその列の`ndarray`である`dict`を返します。
 
 #### **`label_row: list`**
@@ -56,6 +58,7 @@ MOFU.csvlib('*.csv').label_row
 |:------:|:------:|:------:|:------:|
 | label2 | value2-1 | value2-2 | value2-3 |
 | label3 | value3-1 | value3-2 | value3-3 |
+
 このような構造を持つ`csv`ファイルに対して、
 ```
 ['label1' 'label2' 'label3']
@@ -70,6 +73,7 @@ MOFU.csvlib('*.csv').dict_row
 |:------:|:------:|:------:|:------:|
 | label2 | value2-1 | value2-2 | value2-3 |
 | label3 | value3-1 | value3-2 | value3-3 |
+
 このような構造を持つ`csv`ファイルに対して、`key`がラベル、`value`がその列の`ndarray`である`dict`を返します。
 
 ### method
