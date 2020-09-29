@@ -1,4 +1,5 @@
 import MOFU
-mf2=MOFU.read('./full_data_train_to_edit.xlsx')
-print(mf2)
-print(mf2.fulldata['other_data'])
+csvname='out.csv'
+xlsxname='out.xlsx'
+print(MOFU.csvlib(csvname).dict_column)
+print(MOFU.dict_column(MOFU.xlsxlib(xlsxname).read_data_by_sheet_name()))
