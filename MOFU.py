@@ -37,6 +37,12 @@ class csvlib(_base):
         with open(self._fname) as f:
             reader = csv.reader(f)
             return [row for row in reader]
+            
+    def save(self,path):
+        with open(path,'w') as f:
+            writer = csv.writer(f)
+            writer.writerows(self.read_data)
+
 
 class xlsxlib(_base):
     def __init__(self,fname=None):
@@ -88,3 +94,14 @@ class xlsxlib(_base):
     def label(self):
         _wb=xlrd.open_workbook(self._fname)
         return _wb.sheet_names()
+
+    def save(self,path,sheet=0):
+        with open(path,'w') as f:
+            writer = csv.writer(f)
+            writer.writerows(self.read_data[sheet])
+
+# function
+def save_as_csv(array,path):
+    with open(path,'w') as f:
+        writer = csv.writer(f)
+        writer.writerows(array)
